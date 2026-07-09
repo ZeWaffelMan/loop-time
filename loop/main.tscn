@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://cfxydxk8ms1cu"]
+
+[ext_resource type="Script" uid="uid://b7bijiucwbdpe" path="res://timer.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bdi4gre34hny0" path="res://square.png" id="1_h2yge"]
+[ext_resource type="FontFile" uid="uid://cd41gcx8sl52y" path="res://fonts/noto_sans/static/NotoSans-Medium.ttf" id="2_0xm2m"]
+
+[sub_resource type="FontVariation" id="FontVariation_0xm2m"]
+base_font = ExtResource("2_0xm2m")
+
+[node name="Main" type="Node2D" unique_id=301047743]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1377865146]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1253158876]
+modulate = Color(0.9278074, 0.922801, 0.92640704, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_h2yge")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1846977528]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Timer" type="Control" parent="CanvasLayer/Control" unique_id=964554401]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0xm2m")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Timer" unique_id=781985545]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -197.5
+offset_top = -86.0
+offset_right = 197.5
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/Timer/VBoxContainer" unique_id=21045843]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Timer/VBoxContainer/CenterContainer" unique_id=2104766917]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.28717077, 0.28717074, 0.28717074, 1)
+theme_override_fonts/font = SubResource("FontVariation_0xm2m")
+theme_override_font_sizes/font_size = 100
+text = "100000"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Timer/VBoxContainer" unique_id=1434435601]
+layout_mode = 2
+alignment = 1
+
+[node name="StartPause" type="Button" parent="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer" unique_id=291951900]
+layout_mode = 2
+text = "start and pause"
+
+[node name="Reset" type="Button" parent="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer" unique_id=1880749764]
+layout_mode = 2
+text = "reset"
+
+[node name="Reverse" type="Button" parent="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer" unique_id=930409519]
+layout_mode = 2
+text = "reverse"
+
+[node name="Loop" type="Button" parent="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer" unique_id=1126619892]
+layout_mode = 2
+text = "loop"
+
+[connection signal="pressed" from="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer/StartPause" to="CanvasLayer/Control/Timer" method="stop_start"]
+[connection signal="pressed" from="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer/Reset" to="CanvasLayer/Control/Timer" method="reset"]
+[connection signal="pressed" from="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer/Reverse" to="CanvasLayer/Control/Timer" method="reverse"]
+[connection signal="pressed" from="CanvasLayer/Control/Timer/VBoxContainer/HBoxContainer/Loop" to="CanvasLayer/Control/Timer" method="loop"]
