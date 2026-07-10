@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2tqb0gnyah2h"
-path="res://.godot/imported/pause.png-6ad65202fd0748df480c68c2d5099a2b.ctex"
+uid="uid://s3kml34odrvc"
+path="res://.godot/imported/swappy-20260710_153550.png-fc982b116f95003cd6eb60bc1529a12f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/pause.png"
-dest_files=["res://.godot/imported/pause.png-6ad65202fd0748df480c68c2d5099a2b.ctex"]
+source_file="res://icons/swappy-20260710_153550.png"
+dest_files=["res://.godot/imported/swappy-20260710_153550.png-fc982b116f95003cd6eb60bc1529a12f.ctex"]
 
 [params]
 
@@ -36,5 +36,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=64
+process/size_limit=0
 detect_3d/compress_to=1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmju3im3ifasg"
-path="res://.godot/imported/arrows-repeat.png-e5510a8dfc863c70e847147a17bfcbf7.ctex"
+uid="uid://dl80ml8k7jf2m"
+path="res://.godot/imported/loop.png-dba7b73cb91d90e26474687bf5c9295a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icons/arrows-repeat.png"
-dest_files=["res://.godot/imported/arrows-repeat.png-e5510a8dfc863c70e847147a17bfcbf7.ctex"]
+source_file="res://icons/loop.png"
+dest_files=["res://.godot/imported/loop.png-dba7b73cb91d90e26474687bf5c9295a.ctex"]
 
 [params]
 
@@ -36,5 +36,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=64
+process/size_limit=0
 detect_3d/compress_to=1
