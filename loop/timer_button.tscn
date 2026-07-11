@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://ddxu7phda07y7"]
 
 [ext_resource type="StyleBox" uid="uid://bq7wigi6vhrsw" path="res://button.tres" id="1_ihywt"]
+[ext_resource type="Script" uid="uid://1nmg25oik6m8" path="res://timer_button.gd" id="2_ihywt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dyif7"]
 load_path = "res://.godot/imported/play.png-8f33348722067c2b3cb83c7deaeb90b6.ctex"
 
 [node name="TimerButton" type="Button" unique_id=1100910372]
-modulate = Color(0.5529412, 0.49019608, 1, 1)
 theme_override_styles/normal = ExtResource("1_ihywt")
 theme_override_styles/pressed = ExtResource("1_ihywt")
 theme_override_styles/hover = ExtResource("1_ihywt")
 theme_override_styles/disabled = ExtResource("1_ihywt")
 theme_override_styles/focus = ExtResource("1_ihywt")
 icon = SubResource("CompressedTexture2D_dyif7")
+script = ExtResource("2_ihywt")
