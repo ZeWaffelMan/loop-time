@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://cxti0fkw673l2"]
+
+[ext_resource type="Script" uid="uid://b7bijiucwbdpe" path="res://timer.gd" id="1_d1sho"]
+[ext_resource type="FontFile" uid="uid://dgbm5dc5daju1" path="res://fonts/quicksand/static/Quicksand-Regular.ttf" id="2_acuhy"]
+[ext_resource type="FontFile" uid="uid://itn8drqy8utu" path="res://fonts/quicksand/static/Quicksand-Bold.ttf" id="4_rokg3"]
+[ext_resource type="PackedScene" uid="uid://ddxu7phda07y7" path="res://timer_button.tscn" id="5_skflu"]
+[ext_resource type="Texture2D" uid="uid://bwoagv5yaa8b1" path="res://icons/stop.png" id="6_ph1h4"]
+[ext_resource type="Script" uid="uid://cp0h4dun11nog" path="res://texture_button.gd" id="7_d1sho"]
+[ext_resource type="Texture2D" uid="uid://20tpdcgrn76o" path="res://icons/play.png" id="7_mc83r"]
+[ext_resource type="Texture2D" uid="uid://dl8iwo771b7gg" path="res://icons/reset.png" id="8_11as0"]
+[ext_resource type="Texture2D" uid="uid://dvcdacsc3omcl" path="res://icons/pause.png" id="8_acuhy"]
+[ext_resource type="Texture2D" uid="uid://b50oacvk0lw0r" path="res://icons/repeat.png" id="9_7jrio"]
+
+[sub_resource type="FontVariation" id="FontVariation_0xm2m"]
+base_font = ExtResource("2_acuhy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.9607843, 0.96862745, 0.9764706, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[node name="Timer" type="Control" unique_id=935206998]
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d1sho")
+accent_color = Color(0.4627451, 0.39215687, 1, 1)
+
+[node name="TimerAnchor" type="Control" parent="." unique_id=2026209974]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 959.0
+offset_top = -73.0
+offset_right = 999.0
+offset_bottom = -33.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=650390241]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -238.0
+offset_right = 238.0
+offset_bottom = 360.27
+grow_horizontal = 2
+theme_override_constants/separation = 193
+alignment = 1
+
+[node name="Timer" type="Control" parent="VBoxContainer" unique_id=761191705]
+layout_mode = 2
+
+[node name="TimerLabel" type="Label" parent="VBoxContainer/Timer" unique_id=1748743349]
+modulate = Color(0.20784314, 0.20784314, 0.20784314, 1)
+layout_mode = 1
+offset_top = -313.0
+offset_right = 476.0
+offset_bottom = -4.0
+theme_override_fonts/font = SubResource("FontVariation_0xm2m")
+theme_override_font_sizes/font_size = 226
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
+
+[node name="LoopCounter" type="Label" parent="VBoxContainer/Timer" unique_id=2629270]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 87.0
+offset_right = 536.534
+offset_bottom = 162.0
+theme_override_colors/font_color = Color(0.4627451, 0.39607844, 0.9764706, 1)
+theme_override_fonts/font = ExtResource("4_rokg3")
+theme_override_font_sizes/font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+text_direction = 3
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1487460557]
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/Control" unique_id=748286634]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.5
+offset_top = -59.0
+offset_right = 187.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_efxa6")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Control/PanelContainer2" unique_id=2061744815]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_5vw27")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Control/PanelContainer2/PanelContainer" unique_id=1223120169]
+layout_mode = 2
+theme_override_constants/separation = 36
+alignment = 1
+
+[node name="Stop" parent="VBoxContainer/Control/PanelContainer2/PanelContainer/HBoxContainer" unique_id=1100910372 instance=ExtResource("5_skflu")]
+modulate = Color(1, 0.3372549, 0.3764706, 1)
+layout_mode = 2
+icon = ExtResource("6_ph1h4")
+
+[node name="StartPause" parent="VBoxContainer/Control/PanelContainer2/PanelContainer/HBoxContainer" unique_id=814685762 instance=ExtResource("5_skflu")]
+modulate = Color(0.4627451, 0.39215687, 1, 1)
+custom_minimum_size = Vector2(100, 110)
+layout_mode = 2
+toggle_mode = true
+icon = ExtResource("7_mc83r")
+script = ExtResource("7_d1sho")
+default_texture = ExtResource("7_mc83r")
+pressed_texture = ExtResource("8_acuhy")
+
+[node name="Reverse" parent="VBoxContainer/Control/PanelContainer2/PanelContainer/HBoxContainer" unique_id=2123209069 instance=ExtResource("5_skflu")]
+modulate = Color(0.13725491, 0.7882353, 1, 1)
+layout_mode = 2
+icon = ExtResource("8_11as0")
+
+[node name="PanelContainer3" type="PanelContainer" parent="VBoxContainer/Control" unique_id=226712014]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -34.621002
+offset_top = -40.0
+offset_right = 45.37903
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_dg77c")
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Control/PanelContainer3" unique_id=936379472]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_5vw27")
+
+[node name="Control" type="Control" parent="VBoxContainer/Control/PanelContainer3/PanelContainer" unique_id=1930488904]
+clip_contents = true
+layout_mode = 2
+
+[node name="Loop" parent="VBoxContainer/Control/PanelContainer3/PanelContainer/Control" unique_id=1150283035 instance=ExtResource("5_skflu")]
+clip_contents = true
+custom_minimum_size = Vector2(2.019, 0)
+layout_mode = 1
+offset_left = -43.0
+offset_top = -35.5
+offset_right = 45.0
+offset_bottom = 35.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/icon_normal_color = Color(0.21568628, 0.21568628, 0.21960784, 1)
+theme_override_colors/icon_pressed_color = Color(0.4627451, 0.39215687, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.22352941, 0.22352941, 0.23529412, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.4627451, 0.39215687, 1, 1)
+toggle_mode = true
+icon = ExtResource("9_7jrio")
+
+[connection signal="pressed" from="VBoxContainer/Control/PanelContainer2/PanelContainer/HBoxContainer/Stop" to="." method="reset"]
+[connection signal="pressed" from="VBoxContainer/Control/PanelContainer2/PanelContainer/HBoxContainer/StartPause" to="." method="stop_start"]
+[connection signal="pressed" from="VBoxContainer/Control/PanelContainer2/PanelContainer/HBoxContainer/Reverse" to="." method="reverse"]
+[connection signal="pressed" from="VBoxContainer/Control/PanelContainer3/PanelContainer/Control/Loop" to="." method="loop"]
